@@ -8,3 +8,4 @@ const collegeFriends = ["Mr. Smart", "Mr very very smart"];
 const allFriends = [...friends, ...schoolFriends, ...collegeFriends];
 
 console.log(allFriends);
+
