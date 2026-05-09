@@ -36,5 +36,14 @@ const  createTuppleWithObjebtFucntion= <T>(sutudenInfo: T)=> {
     }
 }
 
-console.log(createTuppleWithObjebtFucntion({ name: "Alif", age: 30 }))
-console.log(createTuppleWithObjebtFucntion({ name: "Alif", age: 30 , email: "alif@example.com" , isAdmin: true  }))
+// console.log(createTuppleWithObjebtFucntion({ name: "Alif", age: 30 }))
+// console.log(createTuppleWithObjebtFucntion({ name: "Alif", age: 30 , email: "alif@example.com" , isAdmin: true  }))
+
+const createTuppleWithObjebtFucntion2= <T extends { name: string; age: number }>(sutudenInfo: T)=> {
+    return {
+        course: "TypeScript",
+        ...sutudenInfo
+    }
+}
+console.log(createTuppleWithObjebtFucntion2({ name: "Alif", age: 30 }))
+console.log(createTuppleWithObjebtFucntion2({ name: "Alif", age: 30 , email: "alif@example.com" , isAdmin: true  }))
